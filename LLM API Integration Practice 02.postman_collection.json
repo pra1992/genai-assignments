@@ -1,0 +1,170 @@
+{
+  "info": {
+    "_postman_id": "1ba38793-88bb-4a82-9e51-e0baf86c533e",
+    "name": "LLM API Integration Practice 02",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45876105",
+    "_collection_link": "https://go.postman.co/collection/45876105-1ba38793-88bb-4a82-9e51-e0baf86c533e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "S01-Text to Audio",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer $GROQ_API_KEY"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"model\": \"canopylabs/orpheus-v1-english\",\r\n    \"input\": \"[Cheerful] vanakkam. I am a language model created by Groq. I am here to help you with any questions you may have. How can I assist you today?\",\r\n    \"voice\": \"diana\",\r\n    \"response_format\": \"wav\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/audio/speech",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "audio",
+            "speech"
+          ]
+        },
+        "description": "Generated from cURL: curl https://api.groq.com/openai/v1/audio/speech \\\r\n  -X POST \\\r\n  -H \"Authorization: Bearer $GROQ_API_KEY\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"canopylabs/orpheus-v1-english\",\r\n    \"input\": \"Welcome to Orpheus text-to-speech. [cheerful] This is an example of high-quality English audio generation with vocal directions support.\",\r\n    \"voice\": \"austin\",\r\n    \"response_format\": \"wav\"\r\n  }' \\\r\n  --output orpheus-english.wav\r\n"
+      },
+      "response": []
+    },
+    {
+      "name": "S02- MultiLingual",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"model\": \"llama-3.3-70b-versatile\",\n    \"messages\": [\n        {\n            \"role\": \"system\",\n            \"content\": \"You are an API Specialist. Always respond in the same language as the user.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"மிகவும் நன்றி! இந்த API-ஐ எப்படி பயன்படுத்துவது என்று சொல்லுங்கள்.\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "S03-GenerateAPITestcasesFromSwaggerCode",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{AuthToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"openai/gpt-oss-120b\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a Senior API Test Automation Architect with strong expertise in Java, Rest Assured, TestNG, Maven, and API schema-driven test generation.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"I — INSTRUCTION\\nGenerate Rest Assured Java code for Swagger Petstore APIs.\\n\\nMANDATORY RULES:\\n1) Generate ONLY Java Rest Assured code.\\n2) Do NOT include explanations, markdown, or extra text.\\n3) Use TestNG as the test runner.\\n4) Use meaningful class, method, and variable names.\\n5) Include imports required for Rest Assured, TestNG, and assertions.\\n6) Use reusable base URI setup.\\n7) Cover CRUD operations for Pet resource.\\n8) Add assertions for status code and important response fields.\\n9) Keep the code clean, executable, and production-style.\\n10) [DO NOT] use placeholder comments.\"\n    },{\n        \"role\":\"user\",\n        \"content\":\"\\n\\nC — CONTEXT\\nThe code will be used by QA engineers for API automation practice using Swagger Petstore.\"\n    },\n    {\n        \"role\":\"system\",\n        \"content\":\"\\n\\nP — PERSONA\\nYou are a Senior API Test Automation Architect creating enterprise-style reusable Rest Assured automation code.\"\n    },\n    {\n        \"role\":\"system\",\n        \"content\":\"\\n\\nO — OUTPUT\\nReturn ONLY executable Java code with:\\n- One test class\\n- @BeforeClass setup\\n- Test methods for createPet, getPetById, updatePet, deletePet\\n- Request body creation\\n- Response validation\\n\\nRules:\\n- No markdown fences\\n- No explanation text\\n- No assumptions outside Swagger Petstore Pet API\\n- Use business-readable method names\\n\\nTARGET API:\\nSwagger Petstore\\nResource: Pet\\nOperations required:\\n- Add a new pet\\n- Find pet by ID\\n- Update an existing pet\\n- Delete a pet\"\n    }\n\n\n\n\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUri",
+      "value": ""
+    },
+    {
+      "key": "AuthToken",
+      "secret": true
+    }
+  ]
+}
