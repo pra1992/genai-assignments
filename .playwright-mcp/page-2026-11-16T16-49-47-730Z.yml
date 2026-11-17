@@ -1,0 +1,159 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic "CodeLens AI" [ref=e7]
+        - generic [ref=e17]: Intelligent Java Code Review
+      - button "Switch to light theme" [ref=e18] [cursor=pointer]:
+        - generic [ref=e25]: Light theme
+  - main [ref=e26]:
+    - region "Code review overview" [ref=e53]:
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: REVIEW RESULTS
+        - heading "Code review overview" [level=1] [ref=e57]
+      - region "Review summary" [ref=e58]:
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: JAVA FILE
+          - heading "LearnDragAndDrop.java" [level=2] [ref=e61]
+          - paragraph [ref=e62]: testleaftrainings/Sel_May_2026
+        - generic [ref=e64]:
+          - generic [ref=e65]: Status
+          - generic [ref=e66]: Completed
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - heading "Code Quality Score" [level=3] [ref=e69]
+          - img "Code quality score not provided" [ref=e70]:
+            - generic [ref=e74]: —
+          - generic [ref=e75]: Not provided by the workflow
+        - generic [ref=e76]:
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: SCORING CRITERIA
+            - heading "Category scores" [level=3] [ref=e80]
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: Code Readability
+              - 'img "Code Readability: 13 out of 20" [ref=e84]'
+              - generic [ref=e86]: 13/20
+            - generic [ref=e87]:
+              - generic [ref=e88]: Code Efficiency
+              - 'img "Code Efficiency: 14 out of 20" [ref=e89]'
+              - generic [ref=e91]: 14/20
+            - generic [ref=e92]:
+              - generic [ref=e93]: Error Handling
+              - 'img "Error Handling: 6 out of 20" [ref=e94]'
+              - generic [ref=e96]: 6/20
+            - generic [ref=e97]:
+              - generic [ref=e98]: Maintainability
+              - 'img "Maintainability: 10 out of 20" [ref=e99]'
+              - generic [ref=e101]: 10/20
+            - generic [ref=e102]:
+              - generic [ref=e103]: Best Practices & Standards
+              - 'img "Best Practices & Standards: 9 out of 20" [ref=e104]'
+              - generic [ref=e106]: 9/20
+      - region "Feedback by review area" [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: DETAILED ANALYSIS
+            - heading "Feedback by review area" [level=3] [ref=e111]
+          - generic [ref=e112]: 5 of 5 review areas
+        - group "Filter review areas" [ref=e113]:
+          - button "All" [pressed] [ref=e114] [cursor=pointer]
+          - button "Code Readability" [ref=e115] [cursor=pointer]
+          - button "Code Efficiency" [ref=e116] [cursor=pointer]
+          - button "Error Handling" [ref=e117] [cursor=pointer]
+          - button "Maintainability" [ref=e118] [cursor=pointer]
+          - button "Best Practices & Standards" [ref=e119] [cursor=pointer]
+        - generic [ref=e120]: 5 of 5 review areas shown.
+        - generic [ref=e121]:
+          - article [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - generic [ref=e126]: 13/20
+                  - generic [ref=e127]: Code Readability
+                - heading "Code Readability" [level=4] [ref=e128]
+              - 'button "Copy finding: Code Readability" [ref=e129] [cursor=pointer]':
+                - generic [ref=e133]: Copy finding
+            - paragraph [ref=e134]: Naming is clear (driver, sourceEle, targetEle). Indentation is inconsistent – mixed tabs/spaces and extra blank lines make the block look uneven. No class‑level or method‑level Javadoc/comments describing the purpose of the test. Magic numbers (frame index 0, implicit wait 20 s) are hard‑coded.
+          - article [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - generic [ref=e138]:
+                  - generic [ref=e139]: 14/20
+                  - generic [ref=e140]: Code Efficiency
+                - heading "Code Efficiency" [level=4] [ref=e141]
+              - 'button "Copy finding: Code Efficiency" [ref=e142] [cursor=pointer]':
+                - generic [ref=e146]: Copy finding
+            - paragraph [ref=e147]: The script performs the required actions with minimal steps – no unnecessary loops. However, an implicit wait of 20 s can slow down the whole suite; an explicit wait for the draggable/droppable elements would be more efficient. The driver is never closed, causing a resource leak if the test is run repeatedly.
+          - article [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]: 6/20
+                  - generic [ref=e153]: Error Handling
+                - heading "Error Handling" [level=4] [ref=e154]
+              - 'button "Copy finding: Error Handling" [ref=e155] [cursor=pointer]':
+                - generic [ref=e159]: Copy finding
+            - paragraph [ref=e160]: No try‑catch or try‑finally block – any exception (e.g., NoSuchElementException, WebDriverException) will abort the test without a clear message or clean‑up. No logging of failures or custom messages.
+          - article [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - generic [ref=e165]: 10/20
+                  - generic [ref=e166]: Maintainability
+                - heading "Maintainability" [level=4] [ref=e167]
+              - 'button "Copy finding: Maintainability" [ref=e168] [cursor=pointer]':
+                - generic [ref=e172]: Copy finding
+            - paragraph [ref=e173]: All logic lives inside main; there is no separation of concerns (e.g., page‑object, utility methods). Hard‑coded URL and frame index make future changes error‑prone. No reusable method for “drag‑and‑drop” that could be called from other tests.
+          - article [ref=e174]:
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]: 9/20
+                  - generic [ref=e179]: Best Practices & Standards
+                - heading "Best Practices & Standards" [level=4] [ref=e180]
+              - 'button "Copy finding: Best Practices & Standards" [ref=e181] [cursor=pointer]':
+                - generic [ref=e185]: Copy finding
+            - paragraph [ref=e186]: Direct instantiation of ChromeDriver couples the code to a specific browser; using WebDriverManager or a configurable driver factory is preferred. No use of TestNG/JUnit framework – the code cannot be integrated into CI pipelines as a test case. Missing @Test annotations, assertions, and reporting. No explicit import ordering or unused imports (clean, but could be standardized). No System.setProperty for driver executable – assumes driver binary is on PATH, which is brittle.
+      - generic [ref=e187]:
+        - region "Recommendations" [ref=e188]:
+          - generic [ref=e190]:
+            - paragraph [ref=e191]: NEXT STEPS
+            - heading "Recommendations" [level=3] [ref=e192]
+          - list [ref=e193]:
+            - listitem [ref=e194]:
+              - generic [ref=e198]: "Readability & Documentation: • Add a class‑level Javadoc explaining the test’s purpose. • Use consistent 4‑space indentation and remove extra blank lines. • Replace magic numbers with well‑named constants (e.g., private static final int IMPLICIT_WAIT_SECONDS = 20;)."
+            - listitem [ref=e199]:
+              - generic [ref=e203]: "Resource Management: • Enclose driver usage in a try‑finally (or try‑with‑resources) block and call driver.quit(); in the finally to ensure the browser is closed even on failure."
+            - listitem [ref=e204]:
+              - generic [ref=e208]: "Exception Handling & Logging: • Catch specific Selenium exceptions (NoSuchElementException, TimeoutException) and log meaningful messages using a logging framework (SLF4J/Log4j)."
+            - listitem [ref=e209]:
+              - generic [ref=e213]: "Wait Strategy: • Switch from a long implicit wait to explicit waits (WebDriverWait) for the draggable and droppable elements. This reduces overall test runtime and makes failures more deterministic."
+            - listitem [ref=e214]:
+              - generic [ref=e218]: "Driver Management: • Use WebDriverManager (io.github.bonigarcia:webdrivermanager) to download and configure the ChromeDriver automatically, removing the need for manual driver binaries."
+            - listitem [ref=e219]:
+              - generic [ref=e223]: "Test Framework Integration: • Refactor the code into a TestNG/JUnit test class: @Test public void dragAndDropDemo() { … } • Add assertions (e.g., verify the droppable text changes to “Dropped!”)."
+            - listitem [ref=e224]:
+              - generic [ref=e228]: "Modular Design: • Implement a Page Object Model: create a DroppablePage class that encapsulates locating sourceEle, targetEle, and the dragAndDrop method. • This makes the test reusable and easier to maintain when the UI changes."
+            - listitem [ref=e229]:
+              - generic [ref=e233]: "Configuration: • Externalize the URL, timeout values, and browser type into a properties or YAML file (or use Maven/Gradle profiles)."
+            - listitem [ref=e234]:
+              - generic [ref=e238]: "Security & Stability: • Validate that the URL is reachable before navigating (optional). • Consider adding a screenshot capture on failure for easier debugging."
+            - listitem [ref=e239]:
+              - generic [ref=e243]: "Code Style: • Follow the Google Java Style Guide or Oracle’s conventions: - Class names in PascalCase (LearnDragAndDrop). - Variable names in camelCase (sourceElement). - Use final for variables that never change."
+        - region "Positive observations" [ref=e244]:
+          - generic [ref=e246]:
+            - paragraph [ref=e247]: WHAT'S WORKING
+            - heading "Positive observations" [level=3] [ref=e248]
+          - paragraph [ref=e249]: No positive observations were provided.
+      - group [ref=e250]:
+        - generic "View full workflow report" [ref=e251] [cursor=pointer]
+      - region "Report actions" [ref=e252]:
+        - generic [ref=e253]:
+          - button "Copy report" [ref=e254] [cursor=pointer]
+          - button "Start new review" [ref=e258] [cursor=pointer]
+  - contentinfo [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]: CodeLens AI
+      - generic [ref=e51]: Intelligent Java Code Review
+      - generic [ref=e52]: © 2026 CodeLens AI

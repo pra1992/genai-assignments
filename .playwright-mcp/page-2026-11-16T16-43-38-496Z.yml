@@ -1,0 +1,139 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]:
+        - generic "CodeLens AI" [ref=f1e7]
+        - generic [ref=f1e17]: Intelligent Java Code Review
+      - button "Switch to light theme" [ref=f1e18] [cursor=pointer]:
+        - generic [ref=f1e25]: Light theme
+  - main [ref=f1e26]:
+    - region "Code review overview" [ref=f1e137]:
+      - generic [ref=f1e139]:
+        - paragraph [ref=f1e140]: REVIEW RESULTS
+        - heading "Code review overview" [level=1] [ref=f1e141]
+      - region "Review summary" [ref=f1e142]:
+        - generic [ref=f1e143]:
+          - paragraph [ref=f1e144]: JAVA FILE
+          - heading "LearnDragAndDrop.java" [level=2] [ref=f1e145]
+          - paragraph [ref=f1e146]: testleaftrainings/Sel_May_2026
+        - generic [ref=f1e148]:
+          - generic [ref=f1e149]: Status
+          - generic [ref=f1e150]: Completed
+      - generic [ref=f1e151]:
+        - generic [ref=f1e152]:
+          - heading "Code Quality Score" [level=3] [ref=f1e153]
+          - 'img "Code quality score: 54 out of 100" [ref=f1e154]':
+            - generic [ref=f1e158]: "54"
+          - generic [ref=f1e159]: Overall score
+        - generic [ref=f1e160]:
+          - generic [ref=f1e162]:
+            - paragraph [ref=f1e163]: SCORING CRITERIA
+            - heading "Category scores" [level=3] [ref=f1e164]
+          - generic [ref=f1e165]:
+            - generic [ref=f1e166]:
+              - generic [ref=f1e167]: Code Readability
+              - 'img "Code Readability: 14 out of 20" [ref=f1e168]'
+              - generic [ref=f1e170]: 14/20
+            - generic [ref=f1e171]:
+              - generic [ref=f1e172]: Code Efficiency
+              - 'img "Code Efficiency: 13 out of 20" [ref=f1e173]'
+              - generic [ref=f1e175]: 13/20
+            - generic [ref=f1e176]:
+              - generic [ref=f1e177]: Error Handling
+              - 'img "Error Handling: 8 out of 20" [ref=f1e178]'
+              - generic [ref=f1e180]: 8/20
+            - generic [ref=f1e181]:
+              - generic [ref=f1e182]: Maintainability
+              - 'img "Maintainability: 10 out of 20" [ref=f1e183]'
+              - generic [ref=f1e185]: 10/20
+            - generic [ref=f1e186]:
+              - generic [ref=f1e187]: Best Practices & Standards
+              - 'img "Best Practices & Standards: 9 out of 20" [ref=f1e188]'
+              - generic [ref=f1e190]: 9/20
+      - region "Feedback by review area" [ref=f1e191]:
+        - generic [ref=f1e192]:
+          - generic [ref=f1e193]:
+            - paragraph [ref=f1e194]: DETAILED ANALYSIS
+            - heading "Feedback by review area" [level=3] [ref=f1e195]
+          - generic [ref=f1e196]: 5 of 5 review areas
+        - group "Filter review areas" [ref=f1e197]:
+          - button "All" [pressed] [ref=f1e198] [cursor=pointer]
+          - button "Code Readability" [ref=f1e199] [cursor=pointer]
+          - button "Code Efficiency" [ref=f1e200] [cursor=pointer]
+          - button "Error Handling" [ref=f1e201] [cursor=pointer]
+          - button "Maintainability" [ref=f1e202] [cursor=pointer]
+          - button "Best Practices & Standards" [ref=f1e203] [cursor=pointer]
+        - generic [ref=f1e204]: 5 of 5 review areas shown.
+        - generic [ref=f1e205]:
+          - article [ref=f1e206]:
+            - generic [ref=f1e207]:
+              - generic [ref=f1e208]:
+                - generic [ref=f1e209]:
+                  - generic [ref=f1e210]: 14/20
+                  - generic [ref=f1e211]: Code Readability
+                - heading "Code Readability" [level=4] [ref=f1e212]
+              - 'button "Copy finding: Code Readability" [ref=f1e213] [cursor=pointer]':
+                - generic [ref=f1e217]: Copy finding
+            - paragraph [ref=f1e218]: Naming is reasonable (driver, sourceEle, targetEle). Indentation is inconsistent (mixed tabs/spaces, extra blank lines). No class‑level or method‑level Javadoc/comments describing purpose or pre‑conditions. Hard‑coded values (URL, frame index) are not explained.
+          - article [ref=f1e219]:
+            - generic [ref=f1e220]:
+              - generic [ref=f1e221]:
+                - generic [ref=f1e222]:
+                  - generic [ref=f1e223]: 13/20
+                  - generic [ref=f1e224]: Code Efficiency
+                - heading "Code Efficiency" [level=4] [ref=f1e225]
+              - 'button "Copy finding: Code Efficiency" [ref=f1e226] [cursor=pointer]':
+                - generic [ref=f1e230]: Copy finding
+            - paragraph [ref=f1e231]: No loops or heavy processing – the script is short and runs once. Uses an implicit wait of 20 s which can slow down the test if the element appears quickly. Does not close the browser (driver.quit()) – resources stay alive until JVM exits.
+          - article [ref=f1e232]:
+            - generic [ref=f1e233]:
+              - generic [ref=f1e234]:
+                - generic [ref=f1e235]:
+                  - generic [ref=f1e236]: 8/20
+                  - generic [ref=f1e237]: Error Handling
+                - heading "Error Handling" [level=4] [ref=f1e238]
+              - 'button "Copy finding: Error Handling" [ref=f1e239] [cursor=pointer]':
+                - generic [ref=f1e243]: Copy finding
+            - paragraph [ref=f1e244]: No try‑catch / finally block – any exception (e.g., NoSuchElementException, TimeoutException) will abort the test without a clear message. No logging or reporting of failures.
+          - article [ref=f1e245]:
+            - generic [ref=f1e246]:
+              - generic [ref=f1e247]:
+                - generic [ref=f1e248]:
+                  - generic [ref=f1e249]: 10/20
+                  - generic [ref=f1e250]: Maintainability
+                - heading "Maintainability" [level=4] [ref=f1e251]
+              - 'button "Copy finding: Maintainability" [ref=f1e252] [cursor=pointer]':
+                - generic [ref=f1e256]: Copy finding
+            - paragraph [ref=f1e257]: All logic lives in main; extracting to methods or a Page‑Object would make the script reusable. Direct use of ChromeDriver ties the code to a single browser; using the WebDriver interface would allow easy swapping. Magic numbers (frame(0)) and strings are scattered, making future changes error‑prone.
+          - article [ref=f1e258]:
+            - generic [ref=f1e259]:
+              - generic [ref=f1e260]:
+                - generic [ref=f1e261]:
+                  - generic [ref=f1e262]: 9/20
+                  - generic [ref=f1e263]: Best Practices & Standards
+                - heading "Best Practices & Standards" [level=4] [ref=f1e264]
+              - 'button "Copy finding: Best Practices & Standards" [ref=f1e265] [cursor=pointer]':
+                - generic [ref=f1e269]: Copy finding
+            - paragraph [ref=f1e270]: Missing dependency management – the code assumes the Chrome driver binary is already on the PATH. Using WebDriverManager (or a proper driver‑service) is the current standard. Implicit wait combined with Actions is discouraged; an explicit wait for the draggable/droppable elements would be more reliable. No logging framework (e.g., SLF4J) or test framework (TestNG/JUnit) integration. No use of SOLID/DRY – the single‑purpose script is fine, but it does not illustrate reusable design.
+      - generic [ref=f1e271]:
+        - region "Recommendations" [ref=f1e272]:
+          - generic [ref=f1e274]:
+            - paragraph [ref=f1e275]: NEXT STEPS
+            - heading "Recommendations" [level=3] [ref=f1e276]
+          - paragraph [ref=f1e277]: No recommendations were provided.
+        - region "Positive observations" [ref=f1e278]:
+          - generic [ref=f1e280]:
+            - paragraph [ref=f1e281]: WHAT'S WORKING
+            - heading "Positive observations" [level=3] [ref=f1e282]
+          - paragraph [ref=f1e283]: No positive observations were provided.
+      - group [ref=f1e284]:
+        - generic "View full workflow report" [ref=f1e285] [cursor=pointer]
+      - region "Report actions" [ref=f1e286]:
+        - generic [ref=f1e287]:
+          - button "Copy report" [ref=f1e288] [cursor=pointer]
+          - button "Start new review" [ref=f1e292] [cursor=pointer]
+  - contentinfo [ref=f1e48]:
+    - generic [ref=f1e49]:
+      - generic [ref=f1e50]: CodeLens AI
+      - generic [ref=f1e51]: Intelligent Java Code Review
+      - generic [ref=f1e52]: © 2026 CodeLens AI

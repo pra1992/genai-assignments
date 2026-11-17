@@ -1,0 +1,28 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic "CodeLens AI" [ref=e7]
+        - generic [ref=e17]: Intelligent Java Code Review
+      - button "Switch to light theme" [ref=e18] [cursor=pointer]:
+        - generic [ref=e25]: Light theme
+  - main [ref=e26]:
+    - region "Intelligent Java Code Review" [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: JAVA CODE INTELLIGENCE
+        - heading "Intelligent Java Code Review" [level=1] [ref=e30]
+        - paragraph [ref=e31]: Analyze your Java code, uncover potential issues, and discover opportunities to improve code quality.
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: GitHub Java file URL
+          - textbox "GitHub Java file URL" [ref=e40]:
+            - /placeholder: https://github.com/owner/repository/blob/main/path/File.java
+          - generic [ref=e41]: Paste a link to a Java source file in a GitHub repository.
+        - paragraph [ref=e42]: "Format: github.com/owner/repository/blob/branch/path/File.java"
+        - paragraph [ref=e43]: The submitted URL is sent to the configured CodeLens AI review workflow.
+        - button "Review Code" [ref=e45] [cursor=pointer]
+  - contentinfo [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]: CodeLens AI
+      - generic [ref=e51]: Intelligent Java Code Review
+      - generic [ref=e52]: © 2026 CodeLens AI
